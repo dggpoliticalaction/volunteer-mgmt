@@ -1,0 +1,23 @@
+services:
+  dggsuite:
+    build: ./www
+    ports:
+      - "8090:80"
+    depends_on:
+      - mysql
+    volumes:      
+      - ./www:/var/www/html
+#    restart: always Will be needed at deployment
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dggsuite
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password #until deployment...
+    ports:
+      - "4000:3306"
+    volumes:
+      - ./backup_data:/var/lib/mysql
+#    restart: always
+#No network until closer to deployment
