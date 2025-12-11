@@ -5,8 +5,6 @@ services:
       - "8090:80"
     depends_on:
       - mysql
-    volumes:      
-      - ./www:/var/www/html
 #    restart: always Will be needed at deployment
   mysql:
     image: mysql:5.7
