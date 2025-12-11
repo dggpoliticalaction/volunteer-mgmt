@@ -12,4 +12,7 @@ Rename dockerfile_SUITECRM to just dockerfile, and move it to the www folder.
     * if you run into an error saying "cannot connect to the socket"
 ### Notes 
 * Try: "sudo" if a docker command is giving issues 
+* Details for database setup are located within the docker compose
+    * you will need this to configure the database on the website
+* leave the port as is despite the configuration
 
